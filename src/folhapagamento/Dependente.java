@@ -13,6 +13,7 @@ public class Dependente extends Funcionarios {
     
     public int idade;
 
+    public Dependente( int idade) {
         this.idade = idade;
         
     }
