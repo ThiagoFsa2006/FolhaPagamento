@@ -21,9 +21,7 @@ public class Concursado extends Funcionarios {
         this.tempo = tempo;
         this.bonificação = 200;  
     }
-        public void calculaAcrescimo(){
-           
-        }
+
         public void imprimeContrato(){
     
         System.out.println("________CONTRACHEQUE_CONCURSADOS_______");

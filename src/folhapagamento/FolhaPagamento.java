@@ -37,6 +37,21 @@ public class FolhaPagamento {
             System.out.println("2 - Funcionário Temporário");
             int tipo = teclado.nextInt(); teclado.nextLine();
             
+            System.out.println("Quantos dependentes sao? ");
+            int qdDependentes = teclado.nextInt();teclado.nextLine();
+            
+            ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
+            int i = 0;
+           
+            while (i < qdDependentes) {
+
+               System.out.println("Informe a idade do individuo: ");
+               int idade = teclado.nextInt();teclado.nextLine();
+               
+               Dependente d = new Dependente(idade);
+               dependentes.add(d);
+               
+               i++;
                     if (tipo == 1){
                     System.out.println("Digite o salario base do funcionário: ");
                     double salario = teclado.nextDouble();
@@ -75,6 +90,6 @@ public class FolhaPagamento {
 }
 }
 
-   
+}
     
  

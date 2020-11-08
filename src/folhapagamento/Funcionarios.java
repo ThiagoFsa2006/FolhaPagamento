@@ -18,24 +18,20 @@ public class Funcionarios {
       public double salario;
       public int tempo;
       public double bonificação;
-      public double acrescimoDependente;
    
       
       public ArrayList<Dependente> Dependentes = new ArrayList<Dependente>();
       
-      public boolean associaDependente (Dependente d){
+      public boolean associaDependente (Dependente idade){
           
           if (Dependentes.size() > 5){
               System.out.println("Limite de 5 dependentes!!!");
               return false;
               } 
           else {
-              Dependentes.add(d);
+              Dependentes.add(idade);
               return true;
                }
       
-      }
-      public void contarDependentes(Dependente e){
-   
       }
 }
