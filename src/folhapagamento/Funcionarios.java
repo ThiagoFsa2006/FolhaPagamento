@@ -22,16 +22,25 @@ public class Funcionarios {
       
       public ArrayList<Dependente> Dependentes = new ArrayList<Dependente>();
       
-      public boolean associaDependente (Dependente idade){
-          
-          if (Dependentes.size() > 5){
-              System.out.println("Limite de 5 dependentes!!!");
-              return false;
-              } 
-          else {
-              Dependentes.add(idade);
-              return true;
-               }
-      
+      public int associaDependente (int dependente){
+      if (Dependentes.size() > 5){
+         
+          Dependente d = new Dependente(dependente);
+          d.Dependentes.add(d);
+       } else {
+          System.out.println("O limite de dependentes é 5");
       }
-}
+        return 0;  
+    }
+      public int obtemDependentesNaIdadeLimite(int idade){
+        
+         int totalTransferencia = 0;
+         
+         for (Dependente x : Dependentes){  
+         if (x.estaNaIdadeLimite()){
+          
+         }totalTransferencia++;
+         }
+         return totalTransferencia;
+      }              
+}    

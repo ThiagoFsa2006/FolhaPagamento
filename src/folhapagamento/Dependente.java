@@ -10,12 +10,18 @@ package folhapagamento;
  * @author thiag
  */
 public class Dependente extends Funcionarios {
+
+    public Dependente(int idade) {
+        this.idade = idade;
+    }
     
     public int idade;
 
-    public Dependente( int idade) {
-        this.idade = idade;
-        
+    public boolean estaNaIdadeLimite(){
+    
+    if(this.idade < 18){
+        return true;
     }
-  
+        return false;
+    }
 }

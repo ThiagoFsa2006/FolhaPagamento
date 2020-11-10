@@ -40,7 +40,6 @@ public class FolhaPagamento {
             System.out.println("Quantos dependentes sao? ");
             int qdDependentes = teclado.nextInt();teclado.nextLine();
             
-            ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
             int i = 0;
            
             while (i < qdDependentes) {
@@ -49,9 +48,11 @@ public class FolhaPagamento {
                int idade = teclado.nextInt();teclado.nextLine();
                
                Dependente d = new Dependente(idade);
-               dependentes.add(d);
+               d.associaDependente(idade);
+               d.Dependentes.add(d);
                
-               i++;
+              i++;
+            }
                     if (tipo == 1){
                     System.out.println("Digite o salario base do funcionário: ");
                     double salario = teclado.nextDouble();
@@ -90,6 +91,6 @@ public class FolhaPagamento {
 }
 }
 
-}
+
     
  

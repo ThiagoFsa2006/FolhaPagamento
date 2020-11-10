@@ -21,7 +21,10 @@ public class Concursado extends Funcionarios {
         this.tempo = tempo;
         this.bonificação = 200;  
     }
-
+        public int calculaValorMensal (){
+        
+        return this.obtemDependentesNaIdadeLimite(18);
+    }
         public void imprimeContrato(){
     
         System.out.println("________CONTRACHEQUE_CONCURSADOS_______");
@@ -31,5 +34,6 @@ public class Concursado extends Funcionarios {
         System.out.println("SALARIO BASE DO FUNCIONARIO: R$" + this.salario);
         System.out.println("VALOR TOTAL DE BONIFICAÇÃO: "+ (this.tempo * this.bonificação));
         System.out.println("SALARIO TOTAL: "+ (this.salario + this.tempo * this.bonificação));
+        System.out.println(this.calculaValorMensal());
         }
 }
