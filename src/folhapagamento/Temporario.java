@@ -19,23 +19,29 @@ public class Temporario extends Funcionarios {
         this.salario = salario;
         this.tempo = tempo;
         this.bonificação = 15;
+        this.acrescimo = 50;
         
      }
-        public int calculaValorMensal (){
+        public double calculaAcrescimo(){
         
-        return this.obtemDependentesNaIdadeLimite(18) * 50;
+        return this.obtemDependentesNaIdadeLimite(18)* this.acrescimo;
     }
+        public double calculaValorMensal(){
+        
+        return this.calculaAcrescimo() + this.salario + (this.bonificação* this.tempo);
+    }
+        
         public void imprimeContrato(){
     
         System.out.println("________CONTRACHEQUE_TEMPORARIOS_______");
-        System.out.println("CÓDIGO DO FUNCIONÁRIO: " + this.codigo);
+        super.imprimeContrato();
         System.out.println("FORMA DE INGRESSO: Temporário");
         System.out.println("TEMPO DE SERVIÇO: " + this.tempo + " meses de contratação");
-        System.out.println("SALARIO BASE DO FUNCIONARIO: R$" + this.salario);
-        System.out.println("VALOR TOTAL DE BONIFICAÇÃO: "+ (this.tempo * this.bonificação));
-        System.out.println("ACRESCIMOS DEPENDENTES: " + this.calculaValorMensal());
-        System.out.println("SALARIO TOTAL: "+ (this.calculaSalario() + this.calculaValorMensal()));
-        System.out.println("-------------------------------------------------------------");
+        super.imprimeContratoA();
+        System.out.println("ACRESCIMOS DEPENDENTES: " + this.calculaAcrescimo());
+        System.out.println("SALARIO TOTAL: "+ this.calculaValorMensal());
+        System.out.println("--------------------------------------------1"
+                + "-----------------");
     
     }
 

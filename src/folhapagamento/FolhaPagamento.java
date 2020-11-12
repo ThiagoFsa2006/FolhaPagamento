@@ -14,8 +14,8 @@ import java.util.Scanner;
  */
 public class FolhaPagamento {
     
-    public static ArrayList<Concursado> Concursado;
-    public static ArrayList<Temporario> Temporario;
+    public static ArrayList<Funcionarios> Funcionario;
+
     
     public static void main(String[] args) {
 
@@ -23,8 +23,8 @@ public class FolhaPagamento {
        Scanner teclado = new Scanner(System.in);
        int qtdeFuncionarios = teclado.nextInt(); teclado.nextLine();
 
-       Concursado = new ArrayList<Concursado>();
-       Temporario = new ArrayList<Temporario>();
+       Funcionario = new ArrayList<Funcionarios>();
+ 
        
        int c = 0;
        
@@ -67,7 +67,7 @@ public class FolhaPagamento {
                     for(Dependente d : Dependentes){ 
                      concur.associaDependente(d);
                     }
-                    Concursado.add(concur);
+                    Funcionario.add(concur);
                     }
                     else{
                     System.out.println("Digite o salario base do funcionário: ");
@@ -80,20 +80,14 @@ public class FolhaPagamento {
                     for(Dependente d :Dependentes){
                     temp.associaDependente(d);
                             }
-                    Temporario.add(temp);
+                    Funcionario.add(temp);
                             }
                     c++;
                     } 
 
-                    for(Concursado Funcionarios: Concursado){
+                    for(Funcionarios Funcionarios: Funcionario){
                         Funcionarios.imprimeContrato();
                     }
-
-                    for(Temporario Funcionarios: Temporario){
-                        Funcionarios.imprimeContrato();
-                        
-                    }  
-                    
                   
        }
     }

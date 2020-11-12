@@ -18,36 +18,44 @@ public class Funcionarios {
       public double salario;
       public int tempo;
       public double bonificação;
+      public double acrescimo;
    
       
       public ArrayList<Dependente> Dependentes = new ArrayList<Dependente>();
       
       public int associaDependente (Dependente d){
     
-          if (Dependentes.size() > 5) {
-              System.out.println("Você passou do limite de dependentes!!"); 
-          }
-          else{
-              Dependentes.add(d);
+        if (Dependentes.size() > 5) {
+        System.out.println("Você passou do limite de dependentes!!"); 
+        }
+        else{
+        Dependentes.add(d);
              
-          }
-          return 0;
+        }
+        return 0;
       
-      }
-      public int obtemDependentesNaIdadeLimite(int idade){
+        }
+        public int obtemDependentesNaIdadeLimite(int idade){
         
-         int totalTransferencia = 0;
+        int totalTransferencia = 0;
          
-         for (Dependente x : this.Dependentes){  
+        for (Dependente x : this.Dependentes){  
              
-         if (x.estaNaIdadeLimite(idade)){
+        if (x.estaNaIdadeLimite(idade)){
           
-         }totalTransferencia++;
-         }
-         return totalTransferencia;
-      } 
-      public double calculaSalario(){
-          double totSal = this.salario + this.bonificação*this.tempo;
-          return totSal;
-      }
+        }totalTransferencia++;
+        }
+        return totalTransferencia;
+        } 
+        public double calculaSalario(){
+        return 0;
+        }
+        public void imprimeContrato(){
+        System.out.println("CÓDIGO DO FUNCIONÁRIO: " + this.codigo);
+        }
+         public void imprimeContratoA(){
+        System.out.println("SALARIO BASE DO FUNCIONARIO: R$" + this.salario);
+        System.out.println("VALOR TOTAL DE BONIFICAÇÃO: "+ (this.tempo * this.bonificação));
+        }
+      
 }    
