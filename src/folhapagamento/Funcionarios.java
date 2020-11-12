@@ -23,24 +23,26 @@ public class Funcionarios {
       public ArrayList<Dependente> Dependentes = new ArrayList<Dependente>();
       
       public int associaDependente (int dependente){
-      if (Dependentes.size() > 5){
-         
+    
           Dependente d = new Dependente(dependente);
           d.Dependentes.add(d);
-       } else {
-          System.out.println("O limite de dependentes é 5");
+          return 0;
+      
       }
-        return 0;  
-    }
       public int obtemDependentesNaIdadeLimite(int idade){
         
          int totalTransferencia = 0;
          
-         for (Dependente x : Dependentes){  
-         if (x.estaNaIdadeLimite()){
+         for (Dependente x : this.Dependentes){  
+             
+         if (x.estaNaIdadeLimite(idade)){
           
          }totalTransferencia++;
          }
          return totalTransferencia;
-      }              
+      } 
+      public double calculaSalario(){
+      double totSal = this.salario + this.bonificação*this.tempo;
+          return totSal;
+      }
 }    

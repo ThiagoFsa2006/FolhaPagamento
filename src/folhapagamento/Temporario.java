@@ -33,7 +33,9 @@ public class Temporario extends Funcionarios {
         System.out.println("TEMPO DE SERVIÇO: " + this.tempo + " meses de contratação");
         System.out.println("SALARIO BASE DO FUNCIONARIO: R$" + this.salario);
         System.out.println("VALOR TOTAL DE BONIFICAÇÃO: "+ (this.tempo * this.bonificação));
-        System.out.println("SALARIO TOTAL: "+ (this.salario + this.calculaValorMensal()+ this.tempo * this.bonificação));
+        System.out.println("SALARIO TOTAL: "+ (this.calculaSalario()));
+        System.out.println(this.calculaValorMensal());//apenas teste de impressão do valor
+        System.out.println(this.Dependentes);//apenas teste de impressão do valor
     
     }
 
