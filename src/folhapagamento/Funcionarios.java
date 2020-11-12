@@ -47,7 +47,7 @@ public class Funcionarios {
          return totalTransferencia;
       } 
       public double calculaSalario(){
-      double totSal = this.salario + this.bonificação*this.tempo;
+          double totSal = this.salario + this.bonificação*this.tempo;
           return totSal;
       }
 }    

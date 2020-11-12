@@ -29,6 +29,7 @@ public class FolhaPagamento {
        int c = 0;
        
        while(c < qtdeFuncionarios){
+           
             System.out.println("Digite o codigo do funcionario: ");
             int codigo = teclado.nextInt(); teclado.nextLine();
        
@@ -40,16 +41,18 @@ public class FolhaPagamento {
             System.out.println("Quantos dependentes sao? ");
             int qdDependentes = teclado.nextInt();teclado.nextLine();
             
+            ArrayList<Dependente> Dependentes = new ArrayList<Dependente>();
+            
             int i = 0;
            
             while (i < qdDependentes) {
 
-               System.out.println("Informe a idade do individuo: ");
+               System.out.println("Informe a idade dos dependentes: ");
                int idade = teclado.nextInt();teclado.nextLine();
                
                Dependente d = new Dependente(idade);
             
-               d.associaDependente(d);
+               Dependentes.add(d);
               
               i++;
             }
@@ -61,9 +64,11 @@ public class FolhaPagamento {
                     int tempo = teclado.nextInt(); teclado.nextLine();
 
                     Concursado concur = new Concursado(codigo, tipo, salario, tempo);
-
+                    for(Dependente d : Dependentes){ 
+                     concur.associaDependente(d);
+                    }
                     Concursado.add(concur);
-                    } 
+                    }
                     else{
                     System.out.println("Digite o salario base do funcionário: ");
                     double salario = teclado.nextDouble();
@@ -72,10 +77,11 @@ public class FolhaPagamento {
                     int tempo = teclado.nextInt(); teclado.nextLine();  
 
                     Temporario temp = new Temporario(codigo, tipo, salario, tempo);
-
-                   
+                    for(Dependente d :Dependentes){
+                    temp.associaDependente(d);
+                            }
                     Temporario.add(temp);
-                    }      
+                            }
                     c++;
                     } 
 
@@ -86,10 +92,16 @@ public class FolhaPagamento {
                     for(Temporario Funcionarios: Temporario){
                         Funcionarios.imprimeContrato();
                         
+                    }  
+                    
+                  
+       }
     }
+
+       
              
-}
-}
+
+
 
 
     
