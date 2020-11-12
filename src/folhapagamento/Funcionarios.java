@@ -22,10 +22,15 @@ public class Funcionarios {
       
       public ArrayList<Dependente> Dependentes = new ArrayList<Dependente>();
       
-      public int associaDependente (int dependente){
+      public int associaDependente (Dependente d){
     
-          Dependente d = new Dependente(dependente);
-          d.Dependentes.add(d);
+          if (Dependentes.size() > 5) {
+              System.out.println("Você passou do limite de dependentes!!"); 
+          }
+          else{
+              Dependentes.add(d);
+             
+          }
           return 0;
       
       }

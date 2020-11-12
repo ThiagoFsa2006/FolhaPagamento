@@ -48,9 +48,9 @@ public class FolhaPagamento {
                int idade = teclado.nextInt();teclado.nextLine();
                
                Dependente d = new Dependente(idade);
-               d.associaDependente(idade);
-               d.Dependentes.add(d);
-               
+            
+               d.associaDependente(d);
+              
               i++;
             }
                     if (tipo == 1){
