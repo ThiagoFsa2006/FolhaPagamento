@@ -42,8 +42,8 @@ public class Funcionarios {
         for (Dependente x : this.Dependentes){  
              
         if (x.estaNaIdadeLimite(idade)){
-          
-        }totalTransferencia++;
+          totalTransferencia++;
+        }
         }
         return totalTransferencia;
         } 
