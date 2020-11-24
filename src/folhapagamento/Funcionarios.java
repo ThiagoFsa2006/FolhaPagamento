@@ -39,7 +39,7 @@ public class Funcionarios {
         
         int totalTransferencia = 0;
          
-        for (Dependente x : this.Dependentes){  
+        for (Dependente x : this.Dependentes){ 
              
         if (x.estaNaIdadeLimite(idade)){
           totalTransferencia++;

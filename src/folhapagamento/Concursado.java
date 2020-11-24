@@ -28,7 +28,7 @@ public class Concursado extends Funcionarios {
         
         return this.obtemDependentesNaIdadeLimite(21)* this.acrescimo;
     }
-        public double calculaValorMensal (){
+        public double calculaValorMensal(){
         
         return this.calculaAcrescimo() + this.salario + (this.bonificação* this.tempo);
         
@@ -43,6 +43,6 @@ public class Concursado extends Funcionarios {
         super.imprimeContratoA();
         System.out.println("ACRESCIMOS DEPENDENTES: " + this.calculaAcrescimo());
         System.out.println("SALARIO TOTAL: "+ (this.calculaValorMensal()));
-        System.out.println("-------------------------------------------------------------");
+        System.out.println("---------------------------------------");
         }
 }

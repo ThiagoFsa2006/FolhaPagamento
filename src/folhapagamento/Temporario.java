@@ -40,8 +40,7 @@ public class Temporario extends Funcionarios {
         super.imprimeContratoA();
         System.out.println("ACRESCIMOS DEPENDENTES: " + this.calculaAcrescimo());
         System.out.println("SALARIO TOTAL: "+ this.calculaValorMensal());
-        System.out.println("--------------------------------------------1"
-                + "-----------------");
+        System.out.println("---------------------------------------");
     
     }
 
