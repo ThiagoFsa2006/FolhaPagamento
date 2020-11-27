@@ -51,11 +51,11 @@ public class Funcionarios {
         return 0;
         }
         public void imprimeContrato(){
-        System.out.println("CÓDIGO DO FUNCIONÁRIO: " + this.codigo);
+        System.out.println("CÓDIGO DO FUNCIONÁRIO:" + this.codigo);
         }
          public void imprimeContratoA(){
-        System.out.println("SALARIO BASE DO FUNCIONARIO: R$" + this.salario);
-        System.out.println("VALOR TOTAL DE BONIFICAÇÃO: "+ (this.tempo * this.bonificação));
+        System.out.printf("SALARIO BASE DO FUNCIONARIO: R$ %.2f \n", this.salario);
+        System.out.printf("VALOR TOTAL DE BONIFICAÇÃO: R$ %.2f \n", (this.tempo * this.bonificação));
         }
       
 }    

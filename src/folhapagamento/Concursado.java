@@ -41,8 +41,8 @@ public class Concursado extends Funcionarios {
         System.out.println("FORMA DE INGRESSO: Concursado");
         System.out.println("TEMPO DE SERVIÇO: " + this.tempo + " anos de contratação");
         super.imprimeContratoA();
-        System.out.println("ACRESCIMOS DEPENDENTES: " + this.calculaAcrescimo());
-        System.out.println("SALARIO TOTAL: "+ (this.calculaValorMensal()));
+        System.out.printf("ACRESCIMOS DEPENDENTES: R$ %.2f \n", this.calculaAcrescimo());
+        System.out.printf("SALARIO TOTAL: R$ %.2f \n", (this.calculaValorMensal()));
         System.out.println("---------------------------------------");
         }
 }
